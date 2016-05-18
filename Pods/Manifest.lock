@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (3.4.0)
+  - ARSLineProgress (1.1.1)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - ARSLineProgress (~> 1.0)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  ARSLineProgress: e54c736d1cf043229c2038d35572f9977f240ebd
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: f050551f4ab09d5d03ff5113ba9969e5f69c99f6
+
+COCOAPODS: 1.0.0

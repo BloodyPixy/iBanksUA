@@ -1,0 +1,6 @@
+framework module Pods_iBanksUAUITests {
+  umbrella header "Pods-iBanksUAUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
