@@ -7,6 +7,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Дозвольте нам отримати дані про ваше місцезнаходження</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Дозвольте нам отримати дані про ваше місцезнаходження</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

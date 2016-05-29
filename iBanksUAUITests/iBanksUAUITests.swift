@@ -2,7 +2,7 @@
 //  iBanksUAUITests.swift
 //  iBanksUAUITests
 //
-//  Created by Taras Pasichnyk on 5/16/16.
+//  Created by Taras Pasichnyk on 5/28/16.
 //  Copyright © 2016 Taras Pasichnyk. All rights reserved.
 //
 

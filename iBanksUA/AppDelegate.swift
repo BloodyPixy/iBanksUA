@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  iBanksUA
 //
-//  Created by Taras Pasichnyk on 5/16/16.
+//  Created by Taras Pasichnyk on 5/28/16.
 //  Copyright © 2016 Taras Pasichnyk. All rights reserved.
 //
 
@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
+
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -57,5 +58,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
 
 }
-
 

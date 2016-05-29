@@ -10,7 +10,7 @@ target 'iBanksUA' do
     pod 'ARSLineProgress', '~> 1.0'
     pod 'Alamofire', '~> 3.0'
     pod 'SwiftyJSON'
-
+    
     target 'iBanksUATests' do
         inherit! :search_paths
         # Pods for testing
