@@ -220,9 +220,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -231,7 +228,16 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Банки" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Банки" id="Zdf-7t-Un8">
+                        <barButtonItem key="rightBarButtonItem" title="Відображення" id="Lfw-1L-bdH">
+                            <connections>
+                                <action selector="showDisplayOptions:" destination="7bK-jq-Zjz" id="dUS-dx-Sn7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="vC3-pB-5Vb" kind="showDetail" id="uyp-j6-lI6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,6 +260,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="uyp-j6-lI6"/>
     </inferredMetricsTieBreakers>
 </document>

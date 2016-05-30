@@ -149,7 +149,6 @@
 		BF919CE11CF9AD3F008DBB8A /* iBanksUA */ = {
 			isa = PBXGroup;
 			children = (
-				BF5A462F1CF9C72A005FA9B4 /* CurrencyCell.swift */,
 				BF919D1B1CF9B5A8008DBB8A /* Models */,
 				BF919D1C1CF9B5AF008DBB8A /* Controllers */,
 				BF919CE21CF9AD3F008DBB8A /* AppDelegate.swift */,
@@ -183,6 +182,7 @@
 		BF919D1B1CF9B5A8008DBB8A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF5A462F1CF9C72A005FA9B4 /* CurrencyCell.swift */,
 				BF919D151CF9B1CA008DBB8A /* Bank.swift */,
 				BF919D171CF9B58D008DBB8A /* Currency.swift */,
 			);
@@ -616,10 +616,13 @@
 			baseConfigurationReference = EFEECAA620F10063430D644D /* Pods-iBanksUA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iBanksUA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hardteam.iBanksUA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -628,10 +631,13 @@
 			baseConfigurationReference = 1AC49A114597131E9DFB100F /* Pods-iBanksUA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iBanksUA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hardteam.iBanksUA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
