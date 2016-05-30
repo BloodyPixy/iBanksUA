@@ -23,7 +23,7 @@ class MasterViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -73,6 +73,10 @@ extension MasterViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier(self.currentSegue.rawValue, sender: self)
+    }
+    
 }
 
 // MARK: Segue
@@ -86,26 +90,27 @@ extension MasterViewController {
                 print("\(self.allBanks[indexPath.row]) \(object)")
                 controller.detailItem = self.allBanks[indexPath.row]
             }
-        } else if segue.identifier == currentSegue.rawValue {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = self.banks[indexPath.row]
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                print("\(self.allBanks[indexPath.row]) \(object)")
-                controller.detailItem = self.allBanks[indexPath.row]
-            }
-        } else if segue.identifier == currentSegue.rawValue {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = self.banks[indexPath.row]
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                print("\(self.allBanks[indexPath.row]) \(object)")
-                controller.detailItem = self.allBanks[indexPath.row]
-            }
+            //        } else if segue.identifier == currentSegue.rawValue {
+            //            if let indexPath = self.tableView.indexPathForSelectedRow {
+            //                let object = self.banks[indexPath.row]
+            //                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+            //                print("\(self.allBanks[indexPath.row]) \(object)")
+            //                controller.detailItem = self.allBanks[indexPath.row]
+            //            }
+            //        } else if segue.identifier == currentSegue.rawValue {
+            //            if let indexPath = self.tableView.indexPathForSelectedRow {
+            //                let object = self.banks[indexPath.row]
+            //                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+            //                print("\(self.allBanks[indexPath.row]) \(object)")
+            //                controller.detailItem = self.allBanks[indexPath.row]
+            //            }
+            //        }
         }
+        
     }
-    
 }
 
-//MARK: Action Sheet 
+//MARK: Action Sheet
 extension MasterViewController {
     
     @IBAction func showDisplayOptions(sender: UIBarButtonItem) {
@@ -117,56 +122,62 @@ extension MasterViewController {
         alertController.addAction(cancelAction)
         
         let banksAction = UIAlertAction(title: "Банки", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
-            self.currentSegue = DisplayType.Banks
-            self.banks = []
-            self.allJsonData { (result) in
-                self.allBanks = result[JsonConst.organizations]
-                for (_, object) in self.allBanks {
-                    if !self.banks.contains(object[JsonConst.bank.title].stringValue) {
-                        self.banks.append(object[JsonConst.bank.title].stringValue)
+            if self.currentSegue != DisplayType.Banks {
+                self.currentSegue = DisplayType.Banks
+                self.banks = []
+                self.allJsonData { (result) in
+                    self.allBanks = result[JsonConst.organizations]
+                    for (_, object) in self.allBanks {
+                        if !self.banks.contains(object[JsonConst.bank.title].stringValue) {
+                            self.banks.append(object[JsonConst.bank.title].stringValue)
+                        }
                     }
-                }
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.tableView.reloadData()
-                    self.navigationItem.title = "Банки"
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.tableView.reloadData()
+                        self.navigationItem.title = "Банки"
+                    }
                 }
             }
         })
         alertController.addAction(banksAction)
         
         let citiesAction = UIAlertAction(title: "Міста", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
-            self.currentSegue = DisplayType.Cities
-            self.banks = []
-            self.allCities({ (result) in
-                for city in result {
-                    if !self.banks.contains(city.1.stringValue) {
-                        self.banks.append(city.1.stringValue)
+            if self.currentSegue != DisplayType.Cities {
+                self.currentSegue = DisplayType.Cities
+                self.banks = []
+                self.allCities({ (result) in
+                    for city in result {
+                        if !self.banks.contains(city.1.stringValue) {
+                            self.banks.append(city.1.stringValue)
+                        }
                     }
-                }
-                
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.tableView.reloadData()
-                    self.navigationItem.title = "Міста"
-                }
-            })
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.tableView.reloadData()
+                        self.navigationItem.title = "Міста"
+                    }
+                })
+            }
         })
         alertController.addAction(citiesAction)
         
         let currenciesAction = UIAlertAction(title: "Валюти", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
-            self.currentSegue = DisplayType.Currencies
-            self.banks = []
-            self.allCurrencies({ (result) in
-                for city in result {
-                    if !self.banks.contains(city.1.stringValue) {
-                        self.banks.append(city.1.stringValue)
+            if self.currentSegue != DisplayType.Currencies {
+                self.currentSegue = DisplayType.Currencies
+                self.banks = []
+                self.allCurrencies({ (result) in
+                    for city in result {
+                        if !self.banks.contains(city.1.stringValue) {
+                            self.banks.append(city.1.stringValue)
+                        }
                     }
-                }
-                
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.tableView.reloadData()
-                    self.navigationItem.title = "Валюти"
-                }
-            })
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.tableView.reloadData()
+                        self.navigationItem.title = "Валюти"
+                    }
+                })
+            }
         })
         alertController.addAction(currenciesAction)
         

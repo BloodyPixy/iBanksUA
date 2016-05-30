@@ -236,7 +236,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="vC3-pB-5Vb" kind="showDetail" id="uyp-j6-lI6"/>
+                        <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="uyp-j6-lI6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
