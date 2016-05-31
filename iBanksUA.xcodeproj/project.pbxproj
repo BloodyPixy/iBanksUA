@@ -22,6 +22,7 @@
 		BF919D131CF9AFBA008DBB8A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF919D121CF9AFBA008DBB8A /* Constants.swift */; };
 		BF919D161CF9B1CA008DBB8A /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF919D151CF9B1CA008DBB8A /* Bank.swift */; };
 		BF919D181CF9B58D008DBB8A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF919D171CF9B58D008DBB8A /* Currency.swift */; };
+		BFE5A2931CFDB66E00C1D8F0 /* CityBanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5A2921CFDB66E00C1D8F0 /* CityBanksViewController.swift */; };
 		CCE6B82B8F400DAB45141017 /* Pods_iBanksUAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2118906D8FC0B9171FB11542 /* Pods_iBanksUAUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		BF919D121CF9AFBA008DBB8A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF919D151CF9B1CA008DBB8A /* Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		BF919D171CF9B58D008DBB8A /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		BFE5A2921CFDB66E00C1D8F0 /* CityBanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityBanksViewController.swift; sourceTree = "<group>"; };
 		C3B4180D1AF75D1C9F5BEF0C /* Pods_iBanksUATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iBanksUATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEECAA620F10063430D644D /* Pods-iBanksUA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBanksUA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iBanksUA/Pods-iBanksUA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +197,7 @@
 				BF919CE41CF9AD3F008DBB8A /* MasterViewController.swift */,
 				BF919CE61CF9AD3F008DBB8A /* DetailViewController.swift */,
 				BF382FC41CFB381B00EA05B3 /* ComparationViewController.swift */,
+				BFE5A2921CFDB66E00C1D8F0 /* CityBanksViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				BF919D161CF9B1CA008DBB8A /* Bank.swift in Sources */,
 				BF5A46301CF9C72A005FA9B4 /* CurrencyCell.swift in Sources */,
 				BF919CE31CF9AD3F008DBB8A /* AppDelegate.swift in Sources */,
+				BFE5A2931CFDB66E00C1D8F0 /* CityBanksViewController.swift in Sources */,
 				BF382FC51CFB381B00EA05B3 /* ComparationViewController.swift in Sources */,
 				BF919D131CF9AFBA008DBB8A /* Constants.swift in Sources */,
 			);

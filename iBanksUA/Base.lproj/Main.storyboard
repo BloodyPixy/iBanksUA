@@ -115,7 +115,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="129"/>
+            <point key="canvasLocation" x="709" y="131"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="sAs-we-LrY">
+            <objects>
+                <tableViewController id="ulW-Dk-bs9" customClass="CityBanksViewController" customModule="iBanksUA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lia-Zg-Bnh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" id="aIk-Rx-DGv">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aIk-Rx-DGv" id="K4Q-yf-B4a">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="JEX-9P-axG" kind="show" identifier="showCityBankDetail" id="By4-AA-X3Q"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ulW-Dk-bs9" id="q69-Hl-dMc"/>
+                            <outlet property="delegate" destination="ulW-Dk-bs9" id="FPp-79-Shy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="NWu-3b-2Dm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LbA-DU-9yk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="809"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Eap-hJ-fiD">
+            <objects>
+                <navigationController id="qAh-pn-x0H" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9fT-cn-87j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ulW-Dk-bs9" kind="relationship" relationship="rootViewController" id="d98-F1-a6Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emp-SK-clS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="809"/>
         </scene>
         <!--Порівняння-->
         <scene sceneID="bSY-L7-gmF">
@@ -178,7 +226,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6UR-5T-rlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1450" y="129"/>
+            <point key="canvasLocation" x="1450" y="131"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -237,6 +285,8 @@
                     </navigationItem>
                     <connections>
                         <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="uyp-j6-lI6"/>
+                        <segue destination="qAh-pn-x0H" kind="showDetail" identifier="showCityBanks" id="afd-yL-jtU"/>
+                        <segue destination="rpf-3f-OOO" kind="show" identifier="showCurrencyBanks" id="Irx-xQ-bUZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
@@ -256,10 +306,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="129"/>
+            <point key="canvasLocation" x="-38" y="131"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="uyp-j6-lI6"/>
+        <segue reference="Irx-xQ-bUZ"/>
+        <segue reference="By4-AA-X3Q"/>
     </inferredMetricsTieBreakers>
 </document>

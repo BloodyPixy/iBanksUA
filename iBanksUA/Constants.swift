@@ -11,12 +11,16 @@ import Foundation
 struct Constants {
     
     static let kSegueDetailVC = "showDetail"
+    static let kSegueShowCityBanksVC = "showCityBanks"
+    static let kSegueShowCityBankDetailVC = "showCityBankDetail"
+    static let kSegueShowCurrencyBanksVC = "showCurrencyBanks"
     static let kCompareRates = "compareRates"
     
     struct KeysConstants {
         static let kAllJsonData = "kAllJsonData"
         static let kCurrencyCellIdentifier = "CurrencyCell"
         static let kBankCellIdentifier = "BankCell"
+        static let kCityCellIdentifier = "CityCell"
 //        static let kCompareCellIdentifier = "CompareCell"
     }
     

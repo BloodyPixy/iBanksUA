@@ -29,13 +29,15 @@ class ComparationViewController: UITableViewController {
             self.currencies = [Currency]()
             master.allBanks({ (result) in
                 for bank in result {
-                    let newItem =
-                        Currency(
-                            newKey: detail,
-                            newName: bank.1[JsonConst.bank.title].stringValue,
-                            newSellPrice: bank.1[JsonConst.bank.currencies, detail, "ask"].stringValue,
-                            newBuyPrice: bank.1[JsonConst.bank.currencies, detail, "bid"].stringValue)
-                    self.currencies.append(newItem)
+                    if bank.1[JsonConst.bank.currencies, detail] != nil {
+                        let newItem =
+                            Currency(
+                                newKey: detail,
+                                newName: bank.1[JsonConst.bank.title].stringValue,
+                                newSellPrice: bank.1[JsonConst.bank.currencies, detail, "ask"].stringValue,
+                                newBuyPrice: bank.1[JsonConst.bank.currencies, detail, "bid"].stringValue)
+                        self.currencies.append(newItem)
+                    }
                 }
             })
             
